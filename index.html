@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>自动投胎游戏</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1,user-scalable=0">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <meta name="author" content="" />
+    <meta name="renderer" content="webkit">
+    <meta name="description" content="名人朋友圈" />
+    <meta name="Keywords" content="名人朋友圈">
+
+    <link rel="stylesheet" type="text/css" href="./src/index.css">
+    <script src="http://g.alicdn.com/kissy/k/1.4.8/seed-min.js" data-config="{combine:true}"></script>
+</head>
+<body>
+<div class="wrapper">
+
+	<div class="section box-1 bg-green color-white active">
+		<div class="content">
+			<p>欢迎进入</p>
+			<h1>自助投胎系统</h1>
+			<button class="bg-white" id="btn-step1"><span class="color-green">我要投胎</span></button>
+		</div>
+	</div>
+
+	<div class="section box-2 bg-green color-white">
+		<div class="header">
+			<div class="store">
+                <img src="./src/img/store.png" alt="商城">
+                <span>商城</span>
+            </div>
+		</div>
+		<div class="content">
+            <h1>选择投胎性别</h1>
+            <div class="choose-box">
+                <div class="choose-item">
+                    <img src="./src/img/female_icon.png" alt="女">
+                    <button class="btn-money-required">女<span>(50币)</span></button>
+                </div>
+                <div class="choose-item">
+                    <img src="./src/img/male_icon.png" alt="男">
+                    <button class="bg-white" id="btn-step2">男<span>(免费)</span></button>
+                </div>
+            </div>
+		</div>
+	</div>
+
+    <div class="section box-3 color-white bg-green">
+        <div class="header">
+            <div class="store">
+                <img src="./src/img/store.png" alt="商城">
+                <span>商城</span>
+            </div>
+        </div>
+        <div class="content">
+            <h1>请选择生存难度</h1>
+            <div class="choose-box">
+                <button class="bg-white btn-money-required">简单<span>1000000000币</span></button>
+                <button class="bg-white btn-money-required">中等<span>5000000币</span></button>
+                <button class="bg-white btn-money-required">困难<span>30000币</span></button>
+                <button class="bg-white" id="btn-step3">深渊<span>免费</span></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="section box-4 color-white bg-green">
+        <div class="header">
+            <div class="store">
+                <img src="./src/img/store.png" alt="商城">
+                <span>商城</span>
+            </div>
+        </div>
+        <div class="content">
+            <h1>请选择投胎国家和地区</h1>
+            <div class="choose-box">
+                <img src="./src/img/step4/USA_flag.png" alt="美国" class="USA_flag btn-money-required">
+                <img src="./src/img/step4/russia_flag.png" alt="俄罗斯" class="russia_flag btn-money-required">
+                <img src="./src/img/step4/german_flag.png" alt="德国" class="german_flag btn-money-required">
+                <img src="./src/img/step4/brazil_flag.png" alt="巴西" class="brazil_flag btn-money-required">
+                <img src="./src/img/step4/China_flag.png" alt="中国" class="China_flag" id="btn-step4">
+            </div>
+        </div>
+    </div>
+
+    <div class="section box-5 color-white bg-green">
+        <div class="header">
+            <div class="store">
+                <img src="./src/img/store.png" alt="商城">
+                <span>商城</span>
+            </div>
+        </div>
+        <div class="content">
+            <h1>请选择您的出身</h1>
+            <div class="choose-box">
+                <div class="choose-item"><img class="bg-white btn-money-required" src="./src/img/step5/a.png" alt="高富帅"></div>
+                <div class="choose-item"><img class="bg-white btn-money-required" src="./src/img/step5/b.png" alt="官二代"></div>
+                <div class="choose-item"><img id="btn-step5" class="bg-white btn-money-required" src="./src/img/step5/c.png" alt="穷逼"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section box-6 color-white bg-green">
+        <div class="header">
+            <div class="store">
+                <img src="./src/img/store.png" alt="商城">
+                <span>商城</span>
+            </div>
+        </div>
+        <div class="content">
+            <h1>请选择主要技能</h1>
+            <div class="choose-box">
+                <img src="./src/img/step6/0.png" alt="挣钱" class="btn-money-required">
+                <img src="./src/img/step6/1.png" alt="把妹" class="btn-money-required">
+                <img src="./src/img/step6/2.png" alt="文艺" class="btn-money-required">
+                <img src="./src/img/step6/3.png" alt="泡面" class="btn-money-required">
+                <img src="./src/img/step6/4.png" alt="毛都不会" id="btn-step6" class="btn-money-required">
+                <!-- <button class="bg-white btn-money-required">挣钱<span>1000000000币</span></button>
+                <button class="bg-white btn-money-required">把妹<span>5000000币</span></button>
+                <button class="bg-white btn-money-required">文艺<span>30000币</span></button>
+                <button class="bg-white btn-money-required">泡面<span>30000币</span></button>
+                <button class="bg-white" id="btn-step6">毛都不会<span>免费</span></button> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="section box-7 color-white bg-green">
+        <div class="header">
+            <div class="store">
+                <img src="./src/img/store.png" alt="商城">
+                <span>商城</span>
+            </div>
+        </div>
+        <div class="content">
+            <h1>请选择您的颜值</h1>
+            <div class="choose-box">
+                <div class="choose-item">
+                    <span class="color-red">100000币</span>
+                    <img class="bg-white btn-money-required" src="./src/img/step7/0.png" alt="美男套装">
+                </div>
+                <div class="choose-item">
+                    <span class="color-red">80000币</span>
+                    <img class="bg-white btn-money-required" src="./src/img/step7/1.png" alt="型男套装">
+                </div>
+                <div class="choose-item">
+                    <span class="color-red">免费</span>
+                    <img id="btn-step7" src="./src/img/step7/2.png" alt="免费">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section box-8 color-white bg-green">
+        <div class="header">
+            <div class="store">
+                <img src="./src/img/store.png" alt="商城">
+                <span>商城</span>
+            </div>
+        </div>
+        <div class="content">
+            <h1>您的随机结果为</h1>
+            <div class="choose-box">
+                <img class="result" src="./src/img/step8/result.png" alt="李二狗">
+                <img class="button btn-money-required" src="./src/img/step8/btn2.png" alt="再次随机">
+                <img id="btn-complain" class="button" src="./src/img/step8/btn1.png" alt="我要投诉">
+            </div>
+        </div>
+    </div>
+    <!-- 投诉框 -->
+    <div class="section box-complain bg-green color-white pop-box">
+        <div class="content">
+            <img class="bg-img" src="./src/img/alert.png" alt="">
+            <input type="text" value="尼玛什么玩意儿！坑你大爷">
+            <button class="bg-green color-white" id="submit-complain">提交</button>
+        </div>
+    </div>
+    <!-- 中奖了 -->
+    <div class="section box-award color-white bg-green">
+        <div class="content">
+            <h1>您中奖了！！！！</h1>
+            <div class="choose-box">
+                <div class="choose-item">
+                    <span class="color-red">免费</span>
+                    <img src="./src/img/bhtz.png" alt="疤痕套装">
+                </div>
+                <div class="choose-item">
+                    <p>感谢您的意见，我们</p>
+                    <p>特别赠送您一套</p>
+                    <p><b>豪华面部疤痕套装</b></p>
+                    <p>系统已自动为您装备</p>
+                    <button id="btn-reborn" class="bg-white color-green">立即转生</button>
+                </div>
+            </div>
+            <div class="reborn-animate">
+                <p>系统正在为你分配性别</p>
+                <p>系统正在为你分配出身</p>
+                <p>系统正在为你分配长相</p>
+                <p>自动装配豪华疤痕套装 . . . . . . . . . . . . . . . . . . .  . . . . . . . . . </p>
+                <p>转生完成！</p>
+            </div>
+        </div>
+    </div>
+    <!-- 转生动画 -->
+    <div class="section box-animate bg-white color-gray">
+        <h1 class="title">一个小山村...</h1>
+        <div class="content">
+           <img class="ani-pic active" data-title="一个小山村..." src="./src/img/ani/1.png">
+           <img class="ani-pic" data-title="一个婴儿..." src="./src/img/ani/2.png">
+           <img class="ani-pic end" data-title="一个婴儿..." src="./src/img/ani/3.png">
+        </div>
+    </div>
+    <!-- 名人朋友圈 -->
+    <div class="section box-end bg-white color-gray">
+        <div class="content">
+            <p>换一张皮</p>
+            <h1>体验另一种人生</h1>
+            <div class="body">
+                <img src="./src/img/woman.png">
+                <a id="" class="button bg-green color-white" href="http://www.mrpyq.com">调戏好友</a>
+                <a id="" class="button bg-green color-white" href="http://www.mrpyq.com">我要换皮</a>
+            </div>
+        </div>
+        <div class="footer">
+            <div>
+                <img src="./src/img/wechat_icon.png">
+                <span class="color-lightgray">名人朋友圈</span>
+            </div>
+            <a href="http://www.mrpyq.com" class="color-lightgray">www.mrpyq.com</a>
+        </div>
+    </div>
+    <!-- 商城 -->
+    <div class="section box-store bg-green color-white">
+        <div class="header">
+            <div class="store">
+                <img src="./src/img/store/return.png" alt="返回">
+                <span>返回</span>
+            </div>
+        </div>
+        <div class="content">
+            <div>
+                <p>商城</p>
+                <img src="./src/img/store.png">
+            </div>
+            <p class="title">充值可以使您的人生更加<b>美好</b></p>
+            <div class="body">
+                <button class="btn-chongzhi bg-white color-gray" href="http://www.mrpyq.com">我要充值</button>
+                <button class="btn-store-back bg-white color-gray" href="http://www.mrpyq.com">老子不充</button>
+            </div>
+        </div>
+    </div>
+    <!-- 系统错误 -->
+    <div class="section box-error bg-green color-white pop-box">
+        <div class="content">
+            <img class="bg-img" src="./src/img/alert.png" alt="">
+            <h1 class="color-red">警告！</h1>
+            <p class="color-gray">系统错误，暂时无法充值</p>
+            <button class="btn-chongzhi bg-green color-white">继续投胎</button>
+        </div>
+    </div>
+</div>
+<!--初始化脚本-->
+<script>
+   KISSY.ready(function(S) {
+    S.use('node', function(S,Node){
+        /*// 开始游戏
+        Node.one('#btn-step1').on('tap',function(){
+            Node.one('.box-1').removeClass('active');
+            Node.one('.box-2').addClass('active');
+        });
+        // 选择投胎性别
+        Node.one('#btn-step2').on('tap',function(){
+            Node.one('.box-2').removeClass('active');
+            Node.one('.box-3').addClass('active');
+        });
+        // 请选择生存难度
+        Node.one('#btn-step3').on('tap',function(){
+            Node.one('.box-3').removeClass('active');
+            Node.one('.box-4').addClass('active');
+        });
+        // 请选择投胎国家和地区
+        Node.one('#btn-step4').on('tap',function(){
+            Node.one('.box-4').removeClass('active');
+            Node.one('.box-5').addClass('active');
+        });
+        // 请选择您的出身
+        Node.one('#btn-step5').on('tap',function(){
+            Node.one('.box-5').removeClass('active');
+            Node.one('.box-6').addClass('active');
+        });
+        // 请选择您的技能
+        Node.one('#btn-step6').on('tap',function(){
+            Node.one('.box-6').removeClass('active');
+            Node.one('.box-7').addClass('active');
+        });
+        // 请选择您的颜值
+        Node.one('#btn-step7').on('tap',function(){
+            Node.one('.box-7').removeClass('active');
+            Node.one('.box-8').addClass('active');//激活随机结果页面
+        });*/
+
+        //循环添加流程事件
+        var eType;
+        if(!!S.UA.mobile){
+            eType = "tap";
+        }
+        else{
+            eType = "click";
+        }
+        for(var i=1;i<=7;i++){
+            (function(index){
+                Node.one('#btn-step'+index).on(eType,function(){
+                    Node.one('.box-'+index).removeClass('active');
+                    Node.one('.box-'+(index+1)).addClass('active');
+                });
+            })(i);
+        }
+        //投诉
+        Node.one('#btn-complain').on(eType,function(){
+           Node.one('.box-complain').addClass('active');
+        });
+        Node.one('#submit-complain').on(eType,function(){
+           Node.one('.box-complain').removeClass('active');
+           Node.one('.box-8').removeClass('active');
+           Node.one('.box-award').addClass('active');
+        });
+
+        //转生
+        Node.one('#btn-reborn').on(eType,function(){
+           Node.one('.box-award .choose-box').hide();
+           Node.one('.box-award .reborn-animate').slideToggle(1,function(){
+               Node.one('.box-award').removeClass('active');
+               Node.one('.box-animate').fadeToggle();
+           });
+        });
+        //转生动画
+        Node.all('.box-animate .ani-pic').on(eType,function(e){
+            // alert(this.src);
+            Node.one(this).fadeToggle();
+            if(Node.one(this).hasClass('end')){
+                Node.one('.box-animate').fadeToggle();
+                Node.one('.box-end').fadeToggle();
+            }
+            else{
+                Node.one('.box-animate .title').text("一个婴儿...");
+                Node.one(this).next().fadeToggle();
+            }
+        });
+
+        //商城
+        Node.all('.store,.btn-store-back,.btn-money-required').on(eType,function(e){
+             Node.one('.box-store').fadeToggle(0.2);
+        });
+
+        Node.all('.btn-chongzhi').on(eType,function(e){
+             Node.one('.box-error').fadeToggle(0.2);
+        });
+
+    });
+   })
+</script>
+
+</body>
+</html>
