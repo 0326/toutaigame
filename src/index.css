@@ -17,6 +17,7 @@ button, .button{
 	font-weight: bold;
 	cursor: pointer;
 	text-decoration: none;
+	outline: none;
 }
 .bg-img{
 	position: absolute !important;
@@ -25,7 +26,7 @@ button, .button{
 	left: 0;
 	top: 20%;
 }
-
+.text-left{text-align: left;}
 
 .bg-green{background-color: rgb(28,188,144);}
 .bg-white{background-color: #fff;}
@@ -75,7 +76,8 @@ button, .button{
 }
 
 .pop-box{
-	position: fixed;
+	/*position: fixed;*/
+	position: absolute;
 	z-index: 1000;
 	left: 0;top: 0;
 	height: 100%;
@@ -236,6 +238,9 @@ button, .button{
 	font-size: 3rem;
 	left: 40%;
 	width: 60%;
+}
+.box-award .choose-item p{
+	font-size: 1.5rem;
 }
 .box-award p{
 	margin: .5rem 0;

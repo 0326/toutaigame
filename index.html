@@ -39,11 +39,11 @@
             <div class="choose-box">
                 <div class="choose-item">
                     <img src="./src/img/female_icon.png" alt="女">
-                    <button class="btn-money-required">女<span>(50币)</span></button>
+                    <button class="color-gray btn-money-required">女<span>(50币)</span></button>
                 </div>
                 <div class="choose-item">
                     <img src="./src/img/male_icon.png" alt="男">
-                    <button class="bg-white" id="btn-step2">男<span>(免费)</span></button>
+                    <button class="bg-white color-gray" id="btn-step2">男<span>(免费)</span></button>
                 </div>
             </div>
 		</div>
@@ -59,10 +59,10 @@
         <div class="content">
             <h1>请选择生存难度</h1>
             <div class="choose-box">
-                <button class="bg-white btn-money-required">简单<span>1000000000币</span></button>
-                <button class="bg-white btn-money-required">中等<span>5000000币</span></button>
-                <button class="bg-white btn-money-required">困难<span>30000币</span></button>
-                <button class="bg-white" id="btn-step3">深渊<span>免费</span></button>
+                <button class="bg-white color-gray btn-money-required">简单<span>1000000000币</span></button>
+                <button class="bg-white color-gray btn-money-required">中等<span>5000000币</span></button>
+                <button class="bg-white color-gray btn-money-required">困难<span>30000币</span></button>
+                <button class="bg-white color-gray" id="btn-step3">深渊<span>免费</span></button>
             </div>
         </div>
     </div>
@@ -98,7 +98,7 @@
             <div class="choose-box">
                 <div class="choose-item"><img class="bg-white btn-money-required" src="./src/img/step5/a.png" alt="高富帅"></div>
                 <div class="choose-item"><img class="bg-white btn-money-required" src="./src/img/step5/b.png" alt="官二代"></div>
-                <div class="choose-item"><img id="btn-step5" class="bg-white btn-money-required" src="./src/img/step5/c.png" alt="穷逼"></div>
+                <div class="choose-item"><img id="btn-step5" class="bg-white" src="./src/img/step5/c.png" alt="穷逼"></div>
             </div>
         </div>
     </div>
@@ -117,12 +117,7 @@
                 <img src="./src/img/step6/1.png" alt="把妹" class="btn-money-required">
                 <img src="./src/img/step6/2.png" alt="文艺" class="btn-money-required">
                 <img src="./src/img/step6/3.png" alt="泡面" class="btn-money-required">
-                <img src="./src/img/step6/4.png" alt="毛都不会" id="btn-step6" class="btn-money-required">
-                <!-- <button class="bg-white btn-money-required">挣钱<span>1000000000币</span></button>
-                <button class="bg-white btn-money-required">把妹<span>5000000币</span></button>
-                <button class="bg-white btn-money-required">文艺<span>30000币</span></button>
-                <button class="bg-white btn-money-required">泡面<span>30000币</span></button>
-                <button class="bg-white" id="btn-step6">毛都不会<span>免费</span></button> -->
+                <img src="./src/img/step6/4.png" alt="毛都不会" id="btn-step6">
             </div>
         </div>
     </div>
@@ -186,7 +181,7 @@
                     <span class="color-red">免费</span>
                     <img src="./src/img/bhtz.png" alt="疤痕套装">
                 </div>
-                <div class="choose-item">
+                <div class="choose-item text-left">
                     <p>感谢您的意见，我们</p>
                     <p>特别赠送您一套</p>
                     <p><b>豪华面部疤痕套装</b></p>
@@ -265,50 +260,23 @@
 <script>
    KISSY.ready(function(S) {
     S.use('node', function(S,Node){
-        /*// 开始游戏
-        Node.one('#btn-step1').on('tap',function(){
-            Node.one('.box-1').removeClass('active');
-            Node.one('.box-2').addClass('active');
-        });
-        // 选择投胎性别
-        Node.one('#btn-step2').on('tap',function(){
-            Node.one('.box-2').removeClass('active');
-            Node.one('.box-3').addClass('active');
-        });
-        // 请选择生存难度
-        Node.one('#btn-step3').on('tap',function(){
-            Node.one('.box-3').removeClass('active');
-            Node.one('.box-4').addClass('active');
-        });
-        // 请选择投胎国家和地区
-        Node.one('#btn-step4').on('tap',function(){
-            Node.one('.box-4').removeClass('active');
-            Node.one('.box-5').addClass('active');
-        });
-        // 请选择您的出身
-        Node.one('#btn-step5').on('tap',function(){
-            Node.one('.box-5').removeClass('active');
-            Node.one('.box-6').addClass('active');
-        });
-        // 请选择您的技能
-        Node.one('#btn-step6').on('tap',function(){
-            Node.one('.box-6').removeClass('active');
-            Node.one('.box-7').addClass('active');
-        });
-        // 请选择您的颜值
-        Node.one('#btn-step7').on('tap',function(){
-            Node.one('.box-7').removeClass('active');
-            Node.one('.box-8').addClass('active');//激活随机结果页面
-        });*/
-
-        //循环添加流程事件
         var eType;
+
         if(!!S.UA.mobile){
             eType = "tap";
         }
         else{
+            //适配PC端
             eType = "click";
+            S.DOM.css('html',{
+                'width':S.DOM.viewportHeight()*3/4,
+                'margin-left':'auto',
+                'margin-right':'auto',
+                'background':"rgb(28,188,144)",
+                'position':'relative'
+            });
         }
+        //循环添加流程事件
         for(var i=1;i<=7;i++){
             (function(index){
                 Node.one('#btn-step'+index).on(eType,function(){
@@ -329,23 +297,25 @@
 
         //转生
         Node.one('#btn-reborn').on(eType,function(){
-           Node.one('.box-award .choose-box').hide();
-           Node.one('.box-award .reborn-animate').slideToggle(1,function(){
-               Node.one('.box-award').removeClass('active');
-               Node.one('.box-animate').fadeToggle();
-           });
+            Node.one('.box-award .choose-box').hide();
+            Node.one('.box-award .reborn-animate').slideToggle(1,function(){
+                setTimeout(function(){
+                    Node.one('.box-award').removeClass('active');
+                    Node.one('.box-animate').fadeToggle(0.2);
+                },500);
+            });
         });
         //转生动画
         Node.all('.box-animate .ani-pic').on(eType,function(e){
             // alert(this.src);
             Node.one(this).fadeToggle();
             if(Node.one(this).hasClass('end')){
-                Node.one('.box-animate').fadeToggle();
-                Node.one('.box-end').fadeToggle();
+                Node.one('.box-animate').fadeToggle(0.2);
+                Node.one('.box-end').fadeToggle(0.2);
             }
             else{
                 Node.one('.box-animate .title').text("一个婴儿...");
-                Node.one(this).next().fadeToggle();
+                Node.one(this).next().fadeToggle(0.2);
             }
         });
 
