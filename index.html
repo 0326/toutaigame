@@ -214,7 +214,7 @@
             <h1>体验另一种人生</h1>
             <div class="body">
                 <img src="./src/img/woman.png">
-                <a id="" class="button bg-green color-white" href="http://www.mrpyq.com">调戏好友</a>
+                <a id="" class="share_wx button bg-green color-white">调戏好友</a>
                 <a id="" class="button bg-green color-white" href="http://www.mrpyq.com">我要换皮</a>
             </div>
         </div>
@@ -253,6 +253,24 @@
             <h1 class="color-red">警告！</h1>
             <p class="color-gray">系统错误，暂时无法充值</p>
             <button class="btn-chongzhi bg-green color-white">继续投胎</button>
+        </div>
+    </div>
+    <!-- 余额不足 -->
+    <div class="section box-nomoney bg-green color-white pop-box">
+        <div class="content">
+            <img class="bg-img" src="./src/img/alert.png" alt="">
+            <h1 class="color-gray">警告！</h1>
+            <p class="color-gray">您的余额为0币,无法选择</p>
+            <button class="btn-backmoney bg-green color-white">退回重选</button>
+        </div>
+    </div>
+    <!-- 分享 -->
+    <div class="section box-share bg-green color-white pop-box">
+        <div class="content">
+            <img class="bg-img" src="./src/img/alert.png" alt="">
+            <h1 class="color-gray">分享</h1>
+            <p class="color-gray">点击微信右上角-分享到朋友圈</p>
+            <button class="share_wx bg-green color-white">返回</button>
         </div>
     </div>
 </div>
@@ -320,14 +338,22 @@
         });
 
         //商城
-        Node.all('.store,.btn-store-back,.btn-money-required').on(eType,function(e){
+        Node.all('.store,.btn-store-back').on(eType,function(e){
              Node.one('.box-store').fadeToggle(0.2);
         });
 
         Node.all('.btn-chongzhi').on(eType,function(e){
              Node.one('.box-error').fadeToggle(0.2);
         });
-
+        //余额不足
+        Node.all('.btn-money-required,.btn-backmoney').on(eType,function(e){
+             Node.one('.box-nomoney').fadeToggle(0.2);
+        });
+        //分享
+        Node.all('.share_wx').on(eType,function(e){
+            // e.preventDefault();
+            Node.one('.box-share').fadeToggle(0.2);
+        })
     });
    })
 </script>

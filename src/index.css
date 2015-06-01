@@ -6,6 +6,18 @@ html, body {
   font-family:"微软雅黑",Helvetica;
 }
 
+@media (device-height:480px) and (-webkit-min-device-pixel-ratio:2){/* 兼容iphone4/4s */
+	html, body {
+		font-size: 50%;
+	}
+}
+@media (device-height:568px) and (-webkit-min-device-pixel-ratio:2){/* 兼容iphone5 */
+	html, body {
+		font-size: 50%;
+	}
+}
+
+
 h1{font-size: 2.5rem;margin: .5rem;}
 p{font-size: 2rem;margin: 0}
 
@@ -72,7 +84,7 @@ button, .button{
 }
 .choose-item img{
 	display: block;
-	margin: 2rem;
+	margin: 2rem auto;
 }
 
 .pop-box{
@@ -88,7 +100,9 @@ button, .button{
 	position: relative;
 	z-index: 1;
 }
-
+.pop-box .content{
+	margin: 20% 5% auto 5%;
+}
 /*box-1*/
 .box-1{
 	/*color: #fff;*/
@@ -99,6 +113,10 @@ button, .button{
 }
 
 /*box-2*/
+
+.box-2 .choose-item{
+	max-width: 45%;
+}
 .box-2 .choose-item button{
 	background-color: rgb(234,234,234);
 }
@@ -127,6 +145,7 @@ button, .button{
 
 /*box-4 选择国家*/
 .box-4 .choose-box{
+	margin: 2rem 1rem;
 	background: url(../src/img/step4/bg.png) no-repeat left top;
 	height: 25rem;
 	position: relative;
@@ -218,9 +237,9 @@ button, .button{
 }*/
 .box-complain input{
 	display: block;
-	margin:2rem 5%;
+	margin:2rem auto;
 	width: 90%;
-	font-size: 2.5rem;
+	font-size: 2.2rem;
 	text-align: center;
 	border:none;
 	border-bottom: .2rem solid #fff; 
@@ -240,7 +259,7 @@ button, .button{
 	width: 60%;
 }
 .box-award .choose-item p{
-	font-size: 1.5rem;
+	font-size: 1.4rem;
 }
 .box-award p{
 	margin: .5rem 0;
@@ -309,8 +328,8 @@ button, .button{
 	margin: 1rem;
 }
 
-.box-error button{
-	margin: 4rem auto;
+.box-error button,.box-nomoney button{
+	margin: 2rem auto;
 }
 
 .footer{
@@ -330,4 +349,8 @@ button, .button{
 .footer a{
 	text-decoration: none;
 	margin: .5rem;
+}
+
+.box-share button{
+	margin-top: 1rem;
 }
